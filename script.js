@@ -1,64 +1,43 @@
-// Abin & Aswathy Website Effects ❤️
+// Countdown Timer ❤️
+
+const weddingDate = new Date("March 30, 2026 00:00:00").getTime();
 
 
-// Page loading animation
+setInterval(function(){
 
-window.addEventListener("load", () => {
+const now = new Date().getTime();
 
-    document.body.classList.add("loaded");
-
-});
+const distance = weddingDate - now;
 
 
+const days = Math.floor(distance / (1000*60*60*24));
 
-// Floating hearts effect
-
-function createHeart(){
-
-    const heart = document.createElement("div");
-
-    heart.innerHTML = "❤️";
-
-    heart.className = "heart";
-
-    heart.style.left = Math.random() * 100 + "vw";
-
-    heart.style.animationDuration =
-    (Math.random() * 3 + 3) + "s";
+const hours = Math.floor(
+(distance % (1000*60*60*24))
+/ (1000*60*60)
+);
 
 
-    document.body.appendChild(heart);
+const minutes = Math.floor(
+(distance % (1000*60*60))
+/ (1000*60)
+);
 
 
-    setTimeout(() => {
-
-        heart.remove();
-
-    },5000);
-
-}
-
-
-setInterval(createHeart,1000);
+const seconds = Math.floor(
+(distance % (1000*60))
+/ 1000
+);
 
 
 
-// Smooth scroll
+document.getElementById("days").innerHTML = days;
 
-document.querySelectorAll('a[href^="#"]')
-.forEach(link => {
+document.getElementById("hours").innerHTML = hours;
 
-    link.addEventListener("click", function(e){
+document.getElementById("minutes").innerHTML = minutes;
 
-        e.preventDefault();
+document.getElementById("seconds").innerHTML = seconds;
 
-        document.querySelector(this.getAttribute("href"))
-        .scrollIntoView({
 
-            behavior:"smooth"
-
-        });
-
-    });
-
-});
+},1000);
