@@ -338,3 +338,123 @@ font-size:40px;
 
 
 }
+/* Countdown */
+
+
+.countdown{
+
+margin-top:60px;
+
+}
+
+
+.countdown h3{
+
+font-size:32px;
+
+font-family:'Cormorant Garamond',serif;
+
+color:#b08d2c;
+
+}
+
+
+.timer{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+margin-top:30px;
+
+flex-wrap:wrap;
+
+}
+
+
+.timer div{
+
+background:white;
+
+padding:25px;
+
+min-width:120px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+font-size:16px;
+
+}
+
+
+.timer span{
+
+display:block;
+
+font-size:45px;
+
+color:#b08d2c;
+
+font-weight:bold;
+
+}
+
+
+
+
+/* Timeline */
+
+
+.timeline{
+
+margin-top:80px;
+
+position:relative;
+
+}
+
+
+.timeline-item{
+
+background:white;
+
+padding:30px;
+
+margin:30px auto;
+
+max-width:600px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+transition:.4s;
+
+}
+
+
+.timeline-item:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+.timeline-item h3{
+
+color:#b08d2c;
+
+font-size:28px;
+
+}
+
+
+.timeline-item p{
+
+font-size:18px;
+
+}
