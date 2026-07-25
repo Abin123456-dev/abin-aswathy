@@ -1,6 +1,7 @@
 // Abin & Aswathy ❤️
 // Together Since Counter
 
+alert("Script is working ❤️");
 
 const weddingDate = new Date("March 30, 2026 00:00:00");
 
