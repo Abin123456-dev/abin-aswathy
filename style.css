@@ -1,148 +1,262 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
 
-body {
-    font-family: 'Georgia', serif;
-    background: #faf7f2;
-    color: #333;
+body{
+
+    font-family:'Poppins', sans-serif;
+
+    background:#faf7f2;
+
+    color:#333;
+
 }
 
 
-/* Hero Section */
+/* Navigation */
 
-.hero {
 
-    height: 100vh;
+header{
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    z-index:1000;
+
+}
+
+
+nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px 8%;
+
+    background:rgba(0,0,0,0.25);
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+.logo{
+
+    color:white;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:32px;
+
+}
+
+
+nav ul{
+
+    display:flex;
+
+    gap:30px;
+
+    list-style:none;
+
+}
+
+
+nav ul li a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    transition:.4s;
+
+}
+
+
+nav ul li a:hover{
+
+    color:#d4af37;
+
+}
+
+
+
+/* Hero */
+
+
+.hero{
+
+    height:100vh;
+
 
     background:
+
     linear-gradient(
-        rgba(0,0,0,0.45),
-        rgba(0,0,0,0.45)
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.45)
     ),
+
     url("images/hero.jpg");
 
-    background-size: cover;
-    background-position: center;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-size:cover;
 
-    text-align: center;
-
-    color: white;
-
-}
+    background-position:center;
 
 
-/* Content */
+    display:flex;
 
-.overlay {
+    align-items:center;
 
-    animation: reveal 2s ease;
-
-}
-
-
-.hero h1 {
-
-    font-size: clamp(45px, 8vw, 90px);
-
-    letter-spacing: 5px;
-
-    font-weight: 500;
-
-    text-shadow:
-    0 0 20px rgba(255,255,255,0.4);
-
-}
-
-
-.hero p {
-
-    margin-top: 20px;
-
-    font-size: 28px;
-
-    letter-spacing: 2px;
-
-}
-
-
-
-/* Button */
-
-.button {
-
-    display: inline-block;
-
-    margin-top: 40px;
-
-    padding: 15px 35px;
-
-    border: 1px solid #d4af37;
-
-    color: white;
-
-    text-decoration: none;
-
-    border-radius: 50px;
-
-    transition: 0.4s;
-
-}
-
-
-.button:hover {
-
-    background: #d4af37;
-
-    color: black;
-
-}
-
-
-/* Story Section */
-
-
-.section {
-
-    padding: 100px 10%;
+    justify-content:center;
 
     text-align:center;
 
+    color:white;
+
+
 }
 
 
-.section h2 {
+.overlay{
 
-    font-size:50px;
+    animation:fadeUp 2s ease;
+
+}
+
+
+.hero h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:clamp(55px,8vw,100px);
+
+    letter-spacing:5px;
+
+}
+
+
+.hero p{
+
+    margin-top:15px;
+
+    font-size:25px;
+
+}
+
+
+.date{
+
+    font-size:18px!important;
+
+    letter-spacing:3px;
+
+}
+
+
+
+.button{
+
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    padding:15px 40px;
+
+
+    border:1px solid #d4af37;
+
+
+    border-radius:50px;
+
+
+    color:white;
+
+    text-decoration:none;
+
+
+    transition:.5s;
+
+
+}
+
+
+
+.button:hover{
+
+    background:#d4af37;
+
+    color:black;
+
+}
+
+
+
+
+/* Sections */
+
+
+.section{
+
+
+    padding:100px 10%;
+
+
+    text-align:center;
+
+
+}
+
+
+.section h2{
+
+
+    font-family:'Cormorant Garamond',serif;
+
+
+    font-size:55px;
+
 
     color:#b08d2c;
 
-    margin-bottom:30px;
+
+    margin-bottom:25px;
+
 
 }
 
 
-.section p {
+.section p{
+
 
     max-width:800px;
 
+
     margin:auto;
 
-    font-size:22px;
 
-    line-height:1.8;
+    line-height:2;
+
+
+    font-size:20px;
+
 
 }
 
@@ -151,9 +265,10 @@ body {
 /* Animation */
 
 
-@keyframes reveal {
+@keyframes fadeUp{
 
-from {
+
+from{
 
 opacity:0;
 
@@ -162,7 +277,7 @@ transform:translateY(50px);
 }
 
 
-to {
+to{
 
 opacity:1;
 
@@ -170,16 +285,40 @@ transform:translateY(0);
 
 }
 
+
 }
+
 
 
 /* Mobile */
 
+
 @media(max-width:768px){
 
-.hero h1{
 
-letter-spacing:2px;
+nav{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+
+nav ul{
+
+gap:15px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+
+.logo{
+
+font-size:26px;
 
 }
 
@@ -193,8 +332,9 @@ font-size:20px;
 
 .section h2{
 
-font-size:36px;
+font-size:40px;
 
 }
+
 
 }
