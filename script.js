@@ -2,22 +2,22 @@
 // Together Since Counter
 
 
-const startDate = new Date("January 01, 2026 00:00:00");
+const startDate = new Date("January 1, 2026 00:00:00");
 
 
 function updateCounter(){
 
     const now = new Date();
 
-    const diff = now - startDate;
+    const difference = now - startDate;
 
 
-    const totalSeconds = Math.floor(diff / 1000);
-
-
-    if(totalSeconds < 0){
+    if(difference < 0){
         return;
     }
+
+
+    const totalSeconds = Math.floor(difference / 1000);
 
 
     const years = Math.floor(
@@ -51,17 +51,20 @@ function updateCounter(){
     );
 
 
-    document.getElementById("years").textContent = years;
 
-    document.getElementById("days").textContent = days;
+    document.getElementById("years").innerHTML = years;
 
-    document.getElementById("hours").textContent = hours;
+    document.getElementById("days").innerHTML = days;
 
-    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("hours").innerHTML = hours;
 
-    document.getElementById("seconds").textContent = seconds;
+    document.getElementById("minutes").innerHTML = minutes;
+
+    document.getElementById("seconds").innerHTML = seconds;
+
 
 }
+
 
 
 updateCounter();
