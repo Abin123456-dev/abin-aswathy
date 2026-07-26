@@ -2,7 +2,7 @@
 // Together Since Counter
 
 
-const startDate = new Date("January 1, 2026 00:00:00");
+const startDate = new Date("March 30, 2026 00:00:00");
 
 
 function updateCounter(){
