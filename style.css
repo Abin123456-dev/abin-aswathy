@@ -1,33 +1,133 @@
-/* HERO SECTION */
+/* GLOBAL */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#fffaf5;
+
+    color:#333;
+
+}
+
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+
+
+
+/* HEADER */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(255,255,255,0.85);
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+
+nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 8%;
+
+}
+
+
+
+.logo{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:32px;
+
+    font-weight:600;
+
+    color:#b08d2c;
+
+}
+
+
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:25px;
+
+}
+
+
+
+nav ul li a{
+
+    text-decoration:none;
+
+    color:#333;
+
+    font-weight:500;
+
+}
+
+
+
+
+
+/* HERO */
 
 .hero{
 
-height:100vh;
+    height:100vh;
 
-background-image:
-linear-gradient(
-rgba(0,0,0,0.45),
-rgba(0,0,0,0.45)
-),
-url("images/hero.jpg");
-
-
-background-size:cover;
-
-background-position:center;
-
-background-repeat:no-repeat;
+    background-image:
+    linear-gradient(
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.45)
+    ),
+    url("images/hero.jpg");
 
 
-display:flex;
+    background-size:cover;
 
-align-items:center;
+    background-position:center;
 
-justify-content:center;
+    display:flex;
 
-text-align:center;
+    align-items:center;
 
-color:white;
+    justify-content:center;
+
+    text-align:center;
+
+    color:white;
 
 }
 
@@ -35,7 +135,7 @@ color:white;
 
 .overlay{
 
-padding:40px;
+    padding:40px;
 
 }
 
@@ -43,15 +143,9 @@ padding:40px;
 
 .hero h1{
 
-font-family:'Cormorant Garamond',serif;
+    font-family:'Cormorant Garamond',serif;
 
-font-size:80px;
-
-font-weight:600;
-
-letter-spacing:2px;
-
-text-shadow:0 5px 20px rgba(0,0,0,0.5);
+    font-size:80px;
 
 }
 
@@ -59,19 +153,15 @@ text-shadow:0 5px 20px rgba(0,0,0,0.5);
 
 .hero p{
 
-font-size:30px;
-
-font-family:'Poppins',sans-serif;
+    font-size:30px;
 
 }
 
 
 
-.hero .date{
+.date{
 
-font-size:22px;
-
-margin-top:15px;
+    font-size:22px !important;
 
 }
 
@@ -79,34 +169,260 @@ margin-top:15px;
 
 .button{
 
-display:inline-block;
+    display:inline-block;
 
-margin-top:30px;
+    margin-top:30px;
 
-padding:15px 40px;
+    padding:15px 40px;
 
-border-radius:50px;
+    border-radius:50px;
 
-background:#d4af37;
+    background:#d4af37;
 
-color:white;
+    color:white;
 
-text-decoration:none;
-
-font-size:18px;
-
-transition:0.4s;
+    text-decoration:none;
 
 }
 
 
 
-.button:hover{
 
-transform:scale(1.08);
 
-background:white;
+/* SECTIONS */
 
-color:#b08d2c;
+.section{
+
+    padding:100px 8%;
+
+    text-align:center;
+
+}
+
+
+
+.section h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:55px;
+
+    color:#b08d2c;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+/* COUNTDOWN */
+
+
+.countdown{
+
+    margin-top:50px;
+
+}
+
+
+
+.countdown h3{
+
+    font-size:35px;
+
+    color:#b08d2c;
+
+}
+
+
+
+.counter-text{
+
+    margin:15px;
+
+}
+
+
+
+.timer{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.timer div{
+
+    background:white;
+
+    padding:25px;
+
+    width:120px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+}
+
+
+
+.timer span{
+
+    display:block;
+
+    font-size:35px;
+
+    font-weight:600;
+
+    color:#b08d2c;
+
+}
+
+
+
+
+
+/* TIMELINE */
+
+
+.timeline{
+
+    margin-top:70px;
+
+}
+
+
+
+.timeline-item{
+
+    background:white;
+
+    margin:25px auto;
+
+    max-width:600px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+}
+
+
+
+.timeline-item h3{
+
+    color:#b08d2c;
+
+}
+
+
+
+
+
+/* CONTACT */
+
+
+.contact-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+}
+
+
+
+.person-card{
+
+    background:white;
+
+    width:300px;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+}
+
+
+
+.person-card h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:45px;
+
+    color:#b08d2c;
+
+}
+
+
+
+.person-card a{
+
+    display:block;
+
+    margin:15px;
+
+    padding:12px;
+
+    border:1px solid #d4af37;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    color:#333;
+
+}
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:50px;
+
+}
+
+
+nav ul{
+
+display:none;
+
+}
+
+
+.timer div{
+
+width:100px;
+
+}
+
 
 }
