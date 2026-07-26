@@ -2,14 +2,12 @@
 // Together Since Counter
 
 
-// Change this date to your actual "together since" date
-const startDate = new Date("December 01, 2025 00:00:00");
+const startDate = new Date("January 01, 2026 00:00:00");
 
 
 function updateCounter(){
 
     const now = new Date();
-
 
     const diff = now - startDate;
 
@@ -17,48 +15,53 @@ function updateCounter(){
     const totalSeconds = Math.floor(diff / 1000);
 
 
+    if(totalSeconds < 0){
+        return;
+    }
+
+
     const years = Math.floor(
         totalSeconds / (365 * 24 * 60 * 60)
     );
 
 
-    const remainingAfterYears =
-        totalSeconds % (365 * 24 * 60 * 60);
-
-
-
     const days = Math.floor(
-        remainingAfterYears / (24 * 60 * 60)
+        (totalSeconds % (365 * 24 * 60 * 60))
+        /
+        (24 * 60 * 60)
     );
 
 
     const hours = Math.floor(
-        (remainingAfterYears % (24 * 60 * 60)) / (60 * 60)
+        (totalSeconds % (24 * 60 * 60))
+        /
+        (60 * 60)
     );
 
 
     const minutes = Math.floor(
-        (remainingAfterYears % (60 * 60)) / 60
+        (totalSeconds % (60 * 60))
+        /
+        60
     );
 
 
-    const seconds =
-        remainingAfterYears % 60;
+    const seconds = Math.floor(
+        totalSeconds % 60
+    );
 
 
+    document.getElementById("years").textContent = years;
 
-    document.getElementById("years").innerHTML = years;
+    document.getElementById("days").textContent = days;
 
-    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").textContent = hours;
 
-    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").textContent = minutes;
 
-    document.getElementById("minutes").innerHTML = minutes;
-
-    document.getElementById("seconds").innerHTML = seconds;
+    document.getElementById("seconds").textContent = seconds;
 
 }
-
 
 
 updateCounter();
