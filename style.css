@@ -1,171 +1,77 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-
-html{
-    scroll-behavior:smooth;
-}
-
-
-body{
-
-    font-family:'Poppins', sans-serif;
-
-    background:#faf7f2;
-
-    color:#333;
-
-}
-
-
-/* Navigation */
-
-
-header{
-
-    position:fixed;
-
-    top:0;
-
-    width:100%;
-
-    z-index:1000;
-
-}
-
-
-nav{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:25px 8%;
-
-    background:rgba(0,0,0,0.25);
-
-    backdrop-filter:blur(10px);
-
-}
-
-
-.logo{
-
-    color:white;
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:32px;
-
-}
-
-
-nav ul{
-
-    display:flex;
-
-    gap:30px;
-
-    list-style:none;
-
-}
-
-
-nav ul li a{
-
-    color:white;
-
-    text-decoration:none;
-
-    font-size:15px;
-
-    transition:.4s;
-
-}
-
-
-nav ul li a:hover{
-
-    color:#d4af37;
-
-}
-
-
-
-/* Hero */
-
+/* HERO SECTION */
 
 .hero{
 
-    height:100vh;
+height:100vh;
+
+background-image:
+linear-gradient(
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.45)
+),
+url("images/hero.jpg");
 
 
-    background:
+background-size:cover;
 
-    linear-gradient(
-    rgba(0,0,0,.45),
-    rgba(0,0,0,.45)
-    ),
+background-position:center;
 
-    url("images/hero.jpg");
+background-repeat:no-repeat;
 
 
-    background-size:cover;
+display:flex;
 
-    background-position:center;
+align-items:center;
 
+justify-content:center;
 
-    display:flex;
+text-align:center;
 
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    color:white;
-
+color:white;
 
 }
+
 
 
 .overlay{
 
-    animation:fadeUp 2s ease;
+padding:40px;
 
 }
+
 
 
 .hero h1{
 
-    font-family:'Cormorant Garamond',serif;
+font-family:'Cormorant Garamond',serif;
 
-    font-size:clamp(55px,8vw,100px);
+font-size:80px;
 
-    letter-spacing:5px;
+font-weight:600;
+
+letter-spacing:2px;
+
+text-shadow:0 5px 20px rgba(0,0,0,0.5);
 
 }
+
 
 
 .hero p{
 
-    margin-top:15px;
+font-size:30px;
 
-    font-size:25px;
+font-family:'Poppins',sans-serif;
 
 }
 
 
-.date{
 
-    font-size:18px!important;
+.hero .date{
 
-    letter-spacing:3px;
+font-size:22px;
+
+margin-top:15px;
 
 }
 
@@ -173,27 +79,23 @@ nav ul li a:hover{
 
 .button{
 
+display:inline-block;
 
-    display:inline-block;
+margin-top:30px;
 
-    margin-top:40px;
+padding:15px 40px;
 
-    padding:15px 40px;
+border-radius:50px;
 
+background:#d4af37;
 
-    border:1px solid #d4af37;
+color:white;
 
+text-decoration:none;
 
-    border-radius:50px;
+font-size:18px;
 
-
-    color:white;
-
-    text-decoration:none;
-
-
-    transition:.5s;
-
+transition:0.4s;
 
 }
 
@@ -201,260 +103,10 @@ nav ul li a:hover{
 
 .button:hover{
 
-    background:#d4af37;
-
-    color:black;
-
-}
-
-
-
-
-/* Sections */
-
-
-.section{
-
-
-    padding:100px 10%;
-
-
-    text-align:center;
-
-
-}
-
-
-.section h2{
-
-
-    font-family:'Cormorant Garamond',serif;
-
-
-    font-size:55px;
-
-
-    color:#b08d2c;
-
-
-    margin-bottom:25px;
-
-
-}
-
-
-.section p{
-
-
-    max-width:800px;
-
-
-    margin:auto;
-
-
-    line-height:2;
-
-
-    font-size:20px;
-
-
-}
-
-
-
-/* Animation */
-
-
-@keyframes fadeUp{
-
-
-from{
-
-opacity:0;
-
-transform:translateY(50px);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-
-}
-
-
-
-/* Mobile */
-
-
-@media(max-width:768px){
-
-
-nav{
-
-flex-direction:column;
-
-gap:15px;
-
-}
-
-
-nav ul{
-
-gap:15px;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-}
-
-
-.logo{
-
-font-size:26px;
-
-}
-
-
-.hero p{
-
-font-size:20px;
-
-}
-
-
-.section h2{
-
-font-size:40px;
-
-}
-
-
-}
-/* Countdown */
-
-
-.countdown{
-
-margin-top:60px;
-
-}
-
-
-.countdown h3{
-
-font-size:32px;
-
-font-family:'Cormorant Garamond',serif;
-
-color:#b08d2c;
-
-}
-
-
-.timer{
-
-display:flex;
-
-justify-content:center;
-
-gap:25px;
-
-margin-top:30px;
-
-flex-wrap:wrap;
-
-}
-
-
-.timer div{
+transform:scale(1.08);
 
 background:white;
 
-padding:25px;
-
-min-width:120px;
-
-border-radius:20px;
-
-box-shadow:0 10px 30px rgba(0,0,0,.1);
-
-font-size:16px;
-
-}
-
-
-.timer span{
-
-display:block;
-
-font-size:45px;
-
 color:#b08d2c;
-
-font-weight:bold;
-
-}
-
-
-
-
-/* Timeline */
-
-
-.timeline{
-
-margin-top:80px;
-
-position:relative;
-
-}
-
-
-.timeline-item{
-
-background:white;
-
-padding:30px;
-
-margin:30px auto;
-
-max-width:600px;
-
-border-radius:20px;
-
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-transition:.4s;
-
-}
-
-
-.timeline-item:hover{
-
-transform:translateY(-10px);
-
-}
-
-
-.timeline-item h3{
-
-color:#b08d2c;
-
-font-size:28px;
-
-}
-
-
-.timeline-item p{
-
-font-size:18px;
 
 }
