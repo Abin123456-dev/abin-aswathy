@@ -1,32 +1,29 @@
 // Abin & Aswathy ❤️
-// Our Forever Journey Counter
+// Together Since Counter
 
 
-const startDate = new Date("March 30, 2026 00:00:00");
+// Change this date to your actual "together since" date
+const startDate = new Date("December 01, 2025 00:00:00");
 
 
-function updateCounter() {
+function updateCounter(){
+
+    const now = new Date();
 
 
-    const today = new Date();
-
-
-    let diff = today - startDate;
-
-
-    if (diff < 0) {
-        diff = 0;
-    }
+    const diff = now - startDate;
 
 
     const totalSeconds = Math.floor(diff / 1000);
 
 
-    const years = Math.floor(totalSeconds / (365 * 24 * 60 * 60));
+    const years = Math.floor(
+        totalSeconds / (365 * 24 * 60 * 60)
+    );
 
 
     const remainingAfterYears =
-    totalSeconds % (365 * 24 * 60 * 60);
+        totalSeconds % (365 * 24 * 60 * 60);
 
 
 
@@ -46,7 +43,7 @@ function updateCounter() {
 
 
     const seconds =
-    remainingAfterYears % 60;
+        remainingAfterYears % 60;
 
 
 
@@ -60,12 +57,10 @@ function updateCounter() {
 
     document.getElementById("seconds").innerHTML = seconds;
 
-
 }
 
 
 
 updateCounter();
-
 
 setInterval(updateCounter,1000);
