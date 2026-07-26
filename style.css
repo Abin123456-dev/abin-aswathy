@@ -1,201 +1,112 @@
-/* ==========================
-   HERO SECTION
-========================== */
+/* HERO SECTION */
+
+.hero{
+
+height:100vh;
+
+background-image:
+linear-gradient(
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.45)
+),
+url("images/hero.jpg");
 
 
-.hero {
+background-size:cover;
 
-    height: 100vh;
+background-position:center;
 
-    width: 100%;
-
-    background-image:
-    linear-gradient(
-        rgba(0,0,0,0.45),
-        rgba(0,0,0,0.45)
-    ),
-    url("./images/hero.jpg");
+background-repeat:no-repeat;
 
 
-    background-size: cover;
+display:flex;
 
-    background-position: center center;
+align-items:center;
 
-    background-repeat: no-repeat;
+justify-content:center;
 
+text-align:center;
 
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-
-    text-align: center;
-
-    color: white;
+color:white;
 
 }
 
-
-
-/* HERO CONTENT */
-
-.overlay {
-
-    padding: 40px;
-
-    animation: fadeIn 2s ease;
-
-}
-
-
-
-.hero h1 {
-
-    font-family: 'Cormorant Garamond', serif;
-
-    font-size: 80px;
-
-    font-weight: 600;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 20px;
-
-    text-shadow:
-    0 5px 25px rgba(0,0,0,0.8);
-
-}
-
-
-
-.hero p {
-
-    font-family: 'Poppins', sans-serif;
-
-    font-size: 30px;
-
-    margin: 10px 0;
-
-    text-shadow:
-    0 5px 20px rgba(0,0,0,0.8);
-
-}
-
-
-
-.hero .date {
-
-    font-size: 22px;
-
-    margin-top: 15px;
-
-}
-
-
-
-/* BUTTON */
-
-
-.button {
-
-    display: inline-block;
-
-    margin-top: 35px;
-
-    padding: 15px 45px;
-
-
-    border-radius: 50px;
-
-
-    background: #d4af37;
-
-
-    color: white;
-
-
-    text-decoration: none;
-
-
-    font-family:'Poppins',sans-serif;
-
-    font-size:18px;
-
-
-    transition:0.4s;
-
-}
-
-
-
-.button:hover {
-
-    transform: scale(1.08);
-
-    background:white;
-
-    color:#b08d2c;
-
-}
-
-
-
-
-/* MOBILE VIEW */
-
-
-@media(max-width:768px){
-
-
-.hero h1{
-
-    font-size:50px;
-
-}
-
-
-.hero p{
-
-    font-size:22px;
-
-}
 
 
 .overlay{
 
-    padding:20px;
+padding:40px;
 
 }
 
 
-}
 
+.hero h1{
 
+font-family:'Cormorant Garamond',serif;
 
-/* ANIMATION */
+font-size:80px;
 
+font-weight:600;
 
-@keyframes fadeIn {
+letter-spacing:2px;
 
-
-from {
-
-    opacity:0;
-
-    transform:translateY(30px);
+text-shadow:0 5px 20px rgba(0,0,0,0.5);
 
 }
 
 
-to {
 
-    opacity:1;
+.hero p{
 
-    transform:translateY(0);
+font-size:30px;
+
+font-family:'Poppins',sans-serif;
 
 }
 
+
+
+.hero .date{
+
+font-size:22px;
+
+margin-top:15px;
+
+}
+
+
+
+.button{
+
+display:inline-block;
+
+margin-top:30px;
+
+padding:15px 40px;
+
+border-radius:50px;
+
+background:#d4af37;
+
+color:white;
+
+text-decoration:none;
+
+font-size:18px;
+
+transition:0.4s;
+
+}
+
+
+
+.button:hover{
+
+transform:scale(1.08);
+
+background:white;
+
+color:#b08d2c;
 
 }
